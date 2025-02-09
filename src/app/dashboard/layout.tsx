@@ -1,4 +1,5 @@
 import Sidebar from "@/components/Sidebar";
+import SWRConfigContext from "@/context/SWRConfigContext";
 
 export default function DashboardLayout({
     children,
@@ -8,7 +9,9 @@ export default function DashboardLayout({
     return (
         <section className="flex w-full h-full">
             <Sidebar />
-            <main>{children}</main>
+            <SWRConfigContext>
+                <main className="w-3/4">{children}</main>
+            </SWRConfigContext>
         </section>
     );
 }
