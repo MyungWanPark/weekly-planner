@@ -1,18 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useSWR from "swr";
 import TableHeaders from "./TableHeaders";
 import PlanList from "./PlanList";
+import { Plan } from "@/app/model/plan";
 
 export default function PlanTable() {
     const { data: plans, isLoading, error } = useSWR("/api/weeklyPlan");
-    const [selected, setSelected] = useState();
+    const [sortedData, setSortedData] = useState<Plan[]>([]);
+
+    useEffect(() => {
+        if (plans) {
+            setSortedData(plans);
+        }
+    }, [plans]);
+    console.log("sortedData = ", sortedData);
 
     return (
         <section className="mt-8">
-            <TableHeaders />
-            {plans && <PlanList plans={plans} />}
+            <TableHeaders
+                setSortedData={setSortedData}
+                sortedData={sortedData}
+            />
+            {sortedData && <PlanList plans={sortedData} />}
         </section>
     );
 }
