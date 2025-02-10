@@ -45,3 +45,7 @@ const initData = [
 export async function getAllWeeklyPlan() {
     return initData;
 }
+
+export async function getWeeklyPlanById(id: string) {
+    return initData.find((plan) => plan.id === id);
+}

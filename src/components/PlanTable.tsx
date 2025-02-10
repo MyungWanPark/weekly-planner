@@ -15,7 +15,6 @@ export default function PlanTable() {
             setSortedData(plans);
         }
     }, [plans]);
-    console.log("sortedData = ", sortedData);
 
     return (
         <section className="mt-8">
