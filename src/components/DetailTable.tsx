@@ -3,7 +3,7 @@ export default function DetailTable() {
         <section className="h-full py-10">
             <table className="w-full h-full border border-black border-collapse">
                 <thead className="h-1/10">
-                    <tr className="">
+                    <tr className="bg-extraLightGrey">
                         <th className="w-1/10 border border-black"></th>
                         <th className="w-2/5 border border-black">
                             지난주 완료사항

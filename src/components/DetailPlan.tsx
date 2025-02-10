@@ -8,7 +8,7 @@ type Props = {
 
 export default function DetailPlan({ plan }: Props) {
     return (
-        <section className="w-full h-full flex flex-col">
+        <section className="w-full h-[92%] flex flex-col">
             <DetailMeta plan={plan} />
             <DetailTable />
         </section>

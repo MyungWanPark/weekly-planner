@@ -14,6 +14,7 @@ export default {
                 startBtn: "#0F66DE",
                 lightGrey: "#FAFAFB",
                 semiDarkGrey: "#D9D9D9",
+                extraLightGrey: "#0000000F",
             },
         },
     },
