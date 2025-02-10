@@ -9,7 +9,7 @@ export default function DetailMeta({
     plan: { writer, position, employeeId, correspondWeek },
 }: Props) {
     return (
-        <section className="flex w-full mt-8">
+        <section className="flex w-full mt-8 h-[10%]">
             <div className="border-r border-gray-500 w-1/4 pr-8 grid gap-1">
                 <InfoBox
                     title="성명"

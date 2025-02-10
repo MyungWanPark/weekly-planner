@@ -15,7 +15,7 @@ export default function WeeklyPlanPage() {
         error,
     } = useSWR<Plan>(`/api/weeklyPlan/${id}`);
     return (
-        <section className="w-full px-4 py-10">
+        <section className="w-[90%] px-4 pt-15 h-full">
             <Tab name={plan && plan.name} />
             {plan && <DetailPlan plan={plan} />}
         </section>

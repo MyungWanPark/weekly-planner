@@ -3,7 +3,7 @@ import Tab from "@/components/Tab";
 
 export default function DashBoardPage() {
     return (
-        <article className="w-full px-4 py-10">
+        <article className="w-full px-4 py-10 h-full">
             <Tab />
             <PlanTable />
         </article>

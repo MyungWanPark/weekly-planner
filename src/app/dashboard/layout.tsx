@@ -10,7 +10,7 @@ export default function DashboardLayout({
         <section className="flex w-full h-full">
             <Sidebar />
             <SWRConfigContext>
-                <main className="w-3/4">{children}</main>
+                <main className="w-3/4 h-full">{children}</main>
             </SWRConfigContext>
         </section>
     );
