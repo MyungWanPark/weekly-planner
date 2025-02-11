@@ -21,11 +21,12 @@ export default function Login() {
             password === process.env.NEXT_PUBLIC_PASSWORD
         ) {
             router.push("/dashboard");
+            return;
         }
         setShowWarning(true);
         setTimeout(() => {
             setShowWarning(false);
-        }, 1000);
+        }, 1500);
     };
     const handleIdChange = (e: FormEvent<HTMLInputElement>) => {
         setId(e.currentTarget.value);
