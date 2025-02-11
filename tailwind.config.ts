@@ -15,6 +15,7 @@ export default {
                 lightGrey: "#FAFAFB",
                 semiDarkGrey: "#D9D9D9",
                 extraLightGrey: "#0000000F",
+                bluePurple: "#0F66DE33",
             },
         },
     },

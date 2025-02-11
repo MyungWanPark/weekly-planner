@@ -27,7 +27,7 @@ export default function HamburgerSidebar({
             }`}
         >
             <button className="mb-4 text-gray-700" onClick={toggleMenu}>
-                <FaTimes size={24} />
+                <FaTimes size={15} />
             </button>
             <ul>
                 {MENUS.map((menu, id) => {
@@ -48,9 +48,9 @@ export default function HamburgerSidebar({
                                 </span>
                                 <span className="ml-auto">
                                     {openSubMenu === menu.main ? (
-                                        <FaChevronUp size={16} />
+                                        <FaChevronUp size={12} />
                                     ) : (
-                                        <FaChevronDown size={16} />
+                                        <FaChevronDown size={12} />
                                     )}
                                 </span>
                             </button>
@@ -71,7 +71,7 @@ export default function HamburgerSidebar({
                                                 : () => {}
                                         }
                                     >
-                                        <span className="border-b border-gray-400 pb-1">
+                                        <span className="border-b border-gray-300 pb-1">
                                             {subMenu}
                                         </span>
                                     </li>
