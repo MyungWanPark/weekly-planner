@@ -1,4 +1,4 @@
-import { getAllWeeklyPlan, getWeeklyPlanById } from "@/service/weeklyPlan";
+import { getWeeklyPlanById } from "@/service/weeklyPlan";
 import { NextRequest, NextResponse } from "next/server";
 
 type Context = {
@@ -8,6 +8,6 @@ type Context = {
 };
 
 export async function GET(request: NextRequest, context: Context) {
-    const { id } = await context.params;
+    const { id } = context.params;
     return getWeeklyPlanById(id).then((data) => NextResponse.json(data));
 }
