@@ -24,7 +24,7 @@ export default function Sidebar() {
                 </button>
                 <Logo width={30} height={30} />
             </div>
-            <Button type={1} btnClass="m-2" />
+            <Button type={1} btnClass="ml-4 mt-2" />
             <Menus />
             <HamburgerSidebar
                 isMenuOpen={isMenuOpen}

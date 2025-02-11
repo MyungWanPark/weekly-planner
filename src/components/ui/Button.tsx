@@ -15,7 +15,7 @@ const ButtonStyle = [
     },
     {
         text: (
-            <div className="flex items-center">
+            <div className="flex items-center font-bold py-1">
                 <PlusIcon />
                 <span className="">만들기</span>
             </div>

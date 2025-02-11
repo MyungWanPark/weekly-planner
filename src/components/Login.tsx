@@ -10,10 +10,22 @@ const INPUT_CLASS = "outline-none bg-semiDarkGrey ml-2 p-2 w-4/5";
 export default function Login() {
     const [id, setId] = useState("");
     const [password, setPassword] = useState("");
+    const [showWarning, setShowWarning] = useState(false);
+
     const router = useRouter();
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        router.push("/dashboard");
+
+        if (
+            id === process.env.NEXT_PUBLIC_ID &&
+            password === process.env.NEXT_PUBLIC_PASSWORD
+        ) {
+            router.push("/dashboard");
+        }
+        setShowWarning(true);
+        setTimeout(() => {
+            setShowWarning(false);
+        }, 1000);
     };
     const handleIdChange = (e: FormEvent<HTMLInputElement>) => {
         setId(e.currentTarget.value);
@@ -59,6 +71,11 @@ export default function Login() {
                     <Button type={0} />
                 </div>
             </form>
+            {showWarning && (
+                <p className="mt-2 text-red-500">
+                    아이디 혹은 비밀번호가 틀렸습니다.
+                </p>
+            )}
         </div>
     );
 }
