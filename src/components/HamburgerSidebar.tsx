@@ -1,5 +1,5 @@
 import { FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
-import Logo from "./ui/icons/Logo";
+import SubmenuInfo from "./ui/SubmenuInfo";
 
 type Props = {
     isMenuOpen: boolean;
@@ -11,7 +11,7 @@ type Props = {
 const MENUS = [
     { main: "파일", sub: ["새 계획표", "로그아웃", "닫기"] },
     { main: "편집", sub: ["실행 취소", "다시 실행", "찾기"] },
-    { main: "정보", sub: [<Logo width={20} height={20} />] },
+    { main: "정보", sub: [<SubmenuInfo />] },
 ];
 
 export default function HamburgerSidebar({

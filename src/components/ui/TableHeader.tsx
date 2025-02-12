@@ -30,8 +30,8 @@ export default function TableHeader({
             onClick={handleClick}
         >
             <span>{name}</span>
-            {!isDescendingOrder && <DownArrowIcon />}
-            {isDescendingOrder && <UpArrowIcon />}
+            {isDescendingOrder && <DownArrowIcon />}
+            {!isDescendingOrder && <UpArrowIcon />}
         </div>
     );
 }

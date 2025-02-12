@@ -19,17 +19,6 @@ const initData = [
         correspondWeek: "2024.12.30 ~ 2025.01.04",
         id: "2",
     },
-
-    {
-        name: "24년 3주차",
-        lastModified: "2024.12.16",
-        created: "2024.12.16",
-        writer: "정명길",
-        employeeId: "ef012501",
-        position: "과장",
-        correspondWeek: "2024.12.16 ~ 2024.12.20",
-        id: "4",
-    },
     {
         name: "24년 4주차",
         lastModified: "2024.12.23",
@@ -39,6 +28,16 @@ const initData = [
         position: "주임",
         correspondWeek: "2024.12.23 ~ 2024.12.27",
         id: "3",
+    },
+    {
+        name: "24년 3주차",
+        lastModified: "2024.12.16",
+        created: "2024.12.16",
+        writer: "정명길",
+        employeeId: "ef012501",
+        position: "과장",
+        correspondWeek: "2024.12.16 ~ 2024.12.20",
+        id: "4",
     },
 ];
 

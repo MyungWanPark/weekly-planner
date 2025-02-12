@@ -12,6 +12,8 @@ type Props = {
 };
 export default function Menu({ info }: Props) {
     const pathname = usePathname();
+    const lastSegment = pathname.split("/").pop();
+
     const isActive =
         pathname === `/dashboard${info.route}` ||
         pathname === `/dashboard/${info.route}`;
@@ -24,7 +26,7 @@ export default function Menu({ info }: Props) {
             href={`/dashboard/${info.route}`}
         >
             <FolderIcon className="" />
-            <span className="">{info.name}</span>
+            <span>{info.name}</span>
         </Link>
     );
 }

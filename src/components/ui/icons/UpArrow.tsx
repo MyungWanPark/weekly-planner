@@ -1,5 +1,5 @@
 import { IoIosArrowRoundUp } from "react-icons/io";
 
 export default function UpArrowIcon() {
-    return <IoIosArrowRoundUp />;
+    return <IoIosArrowRoundUp size={20} />;
 }
