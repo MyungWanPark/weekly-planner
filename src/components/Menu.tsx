@@ -13,6 +13,7 @@ type Props = {
 export default function Menu({ info }: Props) {
     const pathname = usePathname();
     const lastSegment = pathname.split("/").pop();
+    const isNumber = /^\d+$/.test(lastSegment || "");
 
     const isActive =
         pathname === `/dashboard${info.route}` ||
@@ -21,8 +22,8 @@ export default function Menu({ info }: Props) {
     return (
         <Link
             className={`flex items-center border-b border-black py-2 px-5 gap-10 hover:bg-bluePurple ${
-                isActive ? "font-bold" : "font-normal"
-            }`}
+                isActive ? "font-bold" : ""
+            } ${isNumber && info.name !== "기타 폴더" ? "font-bold" : ""}`}
             href={`/dashboard/${info.route}`}
         >
             <FolderIcon className="" />
