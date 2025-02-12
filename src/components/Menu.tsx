@@ -21,12 +21,12 @@ export default function Menu({ info }: Props) {
 
     return (
         <Link
-            className={`flex items-center border-b border-black py-2 px-5 gap-10 hover:bg-bluePurple ${
+            className={`text-xs md:text-base flex items-center border-b border-black py-2 px-5 gap-10 hover:bg-bluePurple ${
                 isActive ? "font-bold" : ""
             } ${isNumber && info.name !== "기타 폴더" ? "font-bold" : ""}`}
             href={`/dashboard/${info.route}`}
         >
-            <FolderIcon className="" />
+            <FolderIcon className="hidden lg:block" />
             <span>{info.name}</span>
         </Link>
     );

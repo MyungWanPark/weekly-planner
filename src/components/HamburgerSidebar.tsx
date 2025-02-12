@@ -29,7 +29,7 @@ export default function HamburgerSidebar({
             <button className="mb-4 text-gray-700" onClick={toggleMenu}>
                 <FaTimes size={15} />
             </button>
-            <ul>
+            <ul className="text-xs md:text-base">
                 {MENUS.map((menu, id) => {
                     return (
                         <li key={id} className="border-b border-gray-300">

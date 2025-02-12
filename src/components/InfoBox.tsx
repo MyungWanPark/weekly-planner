@@ -7,7 +7,7 @@ type Props = {
 export default function InfoBox({ title, content, cls }: Props) {
     return (
         <div className={`grid ${cls} w-full items-center`}>
-            <span className="inline-block">{title}</span>
+            <span className="hidden md:inline-block">{title}</span>
             <span className="inline-block">{content}</span>
         </div>
     );

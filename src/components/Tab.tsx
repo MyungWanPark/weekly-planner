@@ -6,7 +6,7 @@ type Props = {
 
 export default function Tab({ name }: Props) {
     return (
-        <div className="border-b border-black w-full flex items-end">
+        <div className="border-b border-black w-full flex items-end text-xs md:text-base">
             <Link
                 href={"/dashboard"}
                 className={` border-black bg-semiDarkGrey text-black inline-block ${
